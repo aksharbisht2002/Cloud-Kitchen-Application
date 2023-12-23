@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "581839313068",
+    "project_id": "delhi-garden-e642c",
+    "storage_bucket": "delhi-garden-e642c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581839313068:android:cc9bb1e2e48f575b15e709",
+        "android_client_info": {
+          "package_name": "com.example.major_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581839313068-jht4nr65q2qigsleje1qbm08nqjis9p5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANuexilrXCQ_qUuEMnhGndwY2Pxw73nSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581839313068-jht4nr65q2qigsleje1qbm08nqjis9p5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

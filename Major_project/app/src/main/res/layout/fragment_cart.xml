@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Cart"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:background="@color/white"
+    android:id="@+id/cartLayout"
+    >
+
+    <LinearLayout
+        android:id="@+id/cartLoader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center"
+        android:elevation="30dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:background="@color/dark_grey"
+           android:gravity="center"
+           >
+           <com.airbnb.lottie.LottieAnimationView
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               app:lottie_autoPlay="true"
+               app:lottie_loop="true"
+               app:lottie_rawRes="@raw/foodbeverage" />
+       </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/brandon_blk"
+                android:text="My Cart"
+                android:textColor="@color/orange"
+                android:textSize="20sp"
+                android:transitionName="AppName" />
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/dataLayout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+            android:visibility="visible"
+             >
+             <ScrollView
+                 android:id="@+id/scrollView2"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginBottom="60dp"
+                 android:scrollbars="none"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical"
+                     android:paddingBottom="20dp"
+                     >
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="10dp"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:id="@+id/cart_counter"
+                             android:layout_width="match_parent"
+                             android:layout_height="50dp"
+                             android:fontFamily="@font/brandon_blk"
+                             android:gravity="center_vertical"
+                             android:paddingLeft="20dp"
+                             android:text="20 items in the cart"
+                             android:textColor="@color/black"
+                             android:textSize="16dp" />
+
+                         <androidx.recyclerview.widget.RecyclerView
+                             android:id="@+id/cart_rv"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:nestedScrollingEnabled="false"
+                             />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="vertical">
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="20dp"
+                             android:layout_marginBottom="8dp"
+                             android:fontFamily="@font/brandon_blk"
+                             android:text="People also buy"
+                             android:textColor="@color/black"
+                             android:textSize="16sp" />
+
+                         <androidx.recyclerview.widget.RecyclerView
+                             android:id="@+id/cart_extra_rv"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content" />
+                     </LinearLayout>
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_margin="20dp"
+                         android:background="@color/white"
+                         android:padding="10dp"
+                         app:cardElevation="5dp">
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:orientation="vertical"
+                             >
+                             <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:padding="5dp"
+                                 android:layout_marginBottom="10dp"
+                                 android:orientation="horizontal"
+                                 >
+                                 <TextView
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:text="Sub Total"
+                                     android:gravity="left"
+                                     android:layout_weight="1"
+                                     android:layout_marginLeft="10dp"
+                                     />
+                                 <TextView
+                                     android:id="@+id/subprice"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:layout_weight="1"
+                                     android:text="$ 4.99"
+                                     android:gravity="right"
+                                     android:layout_marginRight="10dp"
+                                     />
+                             </LinearLayout>
+                             <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:padding="5dp"
+                                 android:layout_marginBottom="10dp"
+                                 android:orientation="horizontal"
+                                 >
+                                 <TextView
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:text="Taxes and Charges"
+                                     android:gravity="left"
+                                     android:layout_weight="1"
+                                     android:layout_marginLeft="10dp"
+                                     />
+                                 <TextView
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:layout_weight="1"
+                                     android:text="3.5 %"
+                                     android:gravity="right"
+                                     android:layout_marginRight="10dp"
+                                     />
+                             </LinearLayout>
+                             <LinearLayout
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:padding="5dp"
+                                 android:layout_marginBottom="10dp"
+                                 android:orientation="horizontal"
+                                 >
+                                 <TextView
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:text="Total Price"
+                                     android:gravity="left"
+                                     android:layout_weight="1"
+                                     android:textStyle="bold"
+                                     android:textSize="16dp"
+                                     />
+                                 <TextView
+                                     android:id="@+id/grandtotal"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:layout_weight="1"
+                                     android:text="$ 5.07"
+                                     android:gravity="right"
+                                     android:textStyle="bold"
+                                     android:textSize="16dp"
+                                     />
+                             </LinearLayout>
+                         </LinearLayout>
+                     </androidx.cardview.widget.CardView>
+
+                 </LinearLayout>
+             </ScrollView>
+
+             <androidx.cardview.widget.CardView
+                 android:layout_width="match_parent"
+                 android:layout_height="60dp"
+                 android:orientation="horizontal"
+                 app:cardCornerRadius="5dp"
+                 app:cardElevation="12dp"
+                 app:layout_constraintHorizontal_bias="0"
+                 app:layout_constraintVertical_bias="1"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="horizontal"
+                     >
+
+                     <LinearLayout
+                         android:id="@+id/totalpriceLayout"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1"
+                         android:gravity="center"
+                         android:layout_marginRight="10dp"
+                         android:background="@color/white"
+                         android:layout_margin="6dp"
+                         >
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="Total : "
+                             android:textColor="@color/orange"
+                             android:textStyle="bold"
+                             android:fontFamily="@font/brandon_blk"
+                             android:textSize="18sp"
+                             />
+                         <TextView
+                             android:id="@+id/totalprice"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text=""
+                             android:textColor="@color/orange"
+                             android:textStyle="bold"
+                             android:fontFamily="@font/brandon_blk"
+                             android:textSize="18sp"
+                             />
+
+                     </LinearLayout>
+                     <Button
+                         android:id="@+id/checkoutBtn"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_weight="1"
+                         android:text="Check Out"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginRight="5dp"
+                         />
+                 </LinearLayout>
+
+             </androidx.cardview.widget.CardView>
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nodataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/emptycart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.895">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Cart Is Empty"
+                    android:textColor="@color/black"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:letterSpacing="0.05"
+                    android:text="Looks  like you haven't added \n anything to your cart yet "
+                    android:textColor="@color/dark_grey"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

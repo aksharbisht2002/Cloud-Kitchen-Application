@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/cardloader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+        android:visibility="invisible"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/outofstock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:background="@color/dark_grey"
+        android:elevation="10dp"
+        android:clickable="true"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Out Of Stock"
+            android:gravity="center"
+            android:textSize="32dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/dark_grey"/>
+
+    </LinearLayout>
+
+ <androidx.cardview.widget.CardView
+     android:id="@+id/foodheading"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     >
+     <ImageView
+         android:id="@+id/foodimg"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scaleType="centerCrop"
+         android:src="@drawable/nonveg" />
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@drawable/bestsalercard_bk"
+         />
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:padding="10dp"
+         >
+
+         <ImageView
+             android:id="@+id/like"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:src="@drawable/redheart"
+             android:elevation="10dp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.971"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0.025" />
+
+         <LinearLayout
+             android:id="@+id/linearLayout"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:gravity="center"
+             android:orientation="horizontal"
+             android:padding="5dp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.0"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0.667">
+
+             <ImageView
+                 android:id="@+id/typelogo"
+                 android:layout_width="15dp"
+                 android:layout_height="15dp"
+                 android:layout_marginRight="5dp"
+                 android:background="@color/white"
+                 android:src="@drawable/veg_icon" />
+
+             <TextView
+                 android:id="@+id/foodname"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:fontFamily="@font/brandon_blk"
+                 android:text="Chicken Kebabs"
+                 android:textColor="@color/white"
+                 android:textSize="16sp" />
+         </LinearLayout>
+
+         <TextView
+             android:id="@+id/fooddesc"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Chills stuffed with a blend of potatoes and spices and deep fried in a batter to make it a dish worth trying"
+             android:textColor="@color/white"
+             android:textSize="10sp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+             app:layout_constraintVertical_bias="0.0" />
+
+         <View
+             android:id="@+id/view"
+             android:layout_width="match_parent"
+             android:layout_height="1dp"
+             android:background="@color/white"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/fooddesc"
+             app:layout_constraintVertical_bias="0.123" />
+
+         <TextView
+             android:id="@+id/foodprice"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="$4.99"
+             android:textColor="@color/white"
+             android:textSize="18dp"
+             android:textStyle="bold"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="0.05"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0.95" />
+
+         <LinearLayout
+             android:id="@+id/addBtn"
+             android:layout_width="90dp"
+             android:layout_height="50dp"
+             android:background="@drawable/addbutton_bk"
+             android:orientation="horizontal"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="1"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/view"
+             app:layout_constraintVertical_bias="1"
+             >
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:text="Add"
+                 android:textColor="@color/white"
+                 android:letterSpacing="0.05"
+                 android:gravity="center"
+
+                 />
+             <ImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:layout_margin="5dp"
+                 android:src="@drawable/baseline_add_white"
+                 />
+
+         </LinearLayout>
+         <LinearLayout
+             android:id="@+id/addedBtn"
+             android:layout_width="90dp"
+             android:layout_height="50dp"
+             android:background="@drawable/addbutton_bk"
+             android:orientation="horizontal"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="1"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/view"
+             app:layout_constraintVertical_bias="1"
+             >
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:text="Add"
+                 android:textColor="@color/white"
+                 android:letterSpacing="0.05"
+                 android:gravity="center"
+
+                 />
+             <ImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:layout_margin="5dp"
+                 android:src="@drawable/baseline_check_white_24"
+                 />
+
+         </LinearLayout>
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+ </androidx.cardview.widget.CardView>
+
+</androidx.cardview.widget.CardView>

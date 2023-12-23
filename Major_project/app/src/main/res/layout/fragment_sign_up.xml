@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.LoginRegister.SignUp"
+    android:background="@color/yellow"
+    android:clickable="true"
+    >
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingBottom="40dp"
+
+      >
+      <ImageView
+          android:id="@+id/imageView6"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:src="@drawable/orangelogo"
+          android:transitionName="Applogo"
+          android:scaleType="centerCrop"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.0" />
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/cardView2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:elevation="10dp"
+          app:cardCornerRadius="30dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/imageView6"
+          app:layout_constraintVertical_bias="0.128">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginTop="20dp"
+                  android:text="Create Account"
+                  android:textSize="25sp"
+                  android:textStyle="bold" />
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/fieldname"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  android:transitionName="nameField"
+                  >
+
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/username"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/white"
+                      android:drawableRight="@drawable/baseline_person_24"
+                      android:hint="User Name"
+                      android:drawableTint="@color/orange"
+                      android:inputType="textPersonName" />
+
+              </com.google.android.material.textfield.TextInputLayout>
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/fieldemail"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:transitionName="emailField"
+                  >
+
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/email"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/white"
+                      android:drawableRight="@drawable/baseline_email_24"
+                      android:hint="Email ID"
+                      android:drawableTint="@color/orange"
+                      android:inputType="textEmailAddress" />
+
+              </com.google.android.material.textfield.TextInputLayout>
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/fieldphone"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:transitionName="phoneField"
+                  >
+
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/phone"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/white"
+                      android:drawableRight="@drawable/baseline_phone_24"
+                      android:hint="Phone"
+                      android:maxLength="10"
+                      android:drawableTint="@color/orange"
+                      android:inputType="phone" />
+
+              </com.google.android.material.textfield.TextInputLayout>
+              <com.google.android.material.textfield.TextInputLayout
+                  android:id="@+id/fieldpass"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:passwordToggleEnabled="true"
+                  app:passwordToggleTint="@color/orange"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:transitionName="passwordField"
+                  >
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/password"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/white"
+                      android:hint="Password"
+                      android:inputType="textPassword" />
+
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <LinearLayout
+                  android:id="@+id/aggrementLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="center"
+                  >
+                  <CheckBox
+                      android:id="@+id/checkbox"
+                      android:layout_width="30dp"
+                      android:layout_height="wrap_content"
+                      android:buttonTint="@color/orange"
+
+                      />
+              <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="I Read and agree to "
+              android:textColor="@color/grey"
+              />
+                  <TextView
+                      android:id="@+id/textView7"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Terms and conditions"
+                      android:textColor="@color/orange" />
+              </LinearLayout>
+
+              <FrameLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:padding="8dp"
+                  android:layout_marginBottom="20dp"
+                  >
+
+                  <Button
+                      android:id="@+id/Registerbutton"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/addbutton_bk"
+                      android:backgroundTint="@color/orange"
+                      android:text="Register Now"
+                      android:textAllCaps="false"
+                      android:layout_gravity="center"
+                      />
+
+                  <ProgressBar
+                      android:id="@+id/processbar"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center|bottom"
+
+                      />
+              </FrameLayout>
+          </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <TextView
+          android:id="@+id/textView8"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Already have an Account? "
+          android:textSize="18sp"
+          android:textStyle="bold"
+          android:layout_marginTop="20dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.316"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/cardView2"
+          app:layout_constraintVertical_bias="0.4" />
+
+      <TextView
+          android:textColor="@color/orange"
+          android:id="@+id/textView9"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Login"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          android:layout_marginTop="20dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.12"
+          app:layout_constraintStart_toEndOf="@+id/textView8"
+          app:layout_constraintTop_toBottomOf="@+id/cardView2"
+          app:layout_constraintVertical_bias="0.4" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
