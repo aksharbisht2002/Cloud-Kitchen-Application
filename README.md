@@ -23,3 +23,14 @@ Another major objective of the app is to ensure that the customer can make stres
 They follow a procedure and redirect the customer from the food ordering app to the bank’s page where they can directly make the payment.
 However, most apps give an option of cash on delivery, wherein the customer can directly pay the delivery boy when her aches home with the food item.
 These delivery apps are helpful to the restaurants as they get direct Ratings and reviews from their clients. The app developers make sure to include a section of review and ratings where the customer can rate their level of satisfaction with the food and the delivery time. In most cases nowadays, the restaurants also ask for feedback on the behavior of the delivery guy.
+
+3. ## Coding Languages
+
+BookMyEvent is developed using the following programming languages:
+
+- **Java**: Java is the primary language used for developing the Android application. It is the standard language for Android development and provides robust features for building mobile applications. like :- signup.java , login.java 
+
+- **XML**: XML is used for designing the user interface layouts of the application. Android's layout files are written in XML, defining the structure and appearance of the app's screens. like :- signup.xml . login.xml
+
+- **SQL**: SQL (Structured Query Language) is used for managing and querying the database in the application. It is used to store and retrieve data related to events, user accounts, bookings, etc.    like :- database.sql 
+
