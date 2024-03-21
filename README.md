@@ -28,11 +28,11 @@ git clone https://github.com/aksharbisht2002/Cloud-Kitchen-Application.git
 
 BookMyEvent is developed using the following programming languages:
 
-- **Java**: Java is the primary language used for developing the Android application. It is the standard language for Android development and provides robust features for building mobile applications.
+- **Java**: Java is the primary language used for developing the Android application. It is the standard language for Android development and provides robust features for building mobile applications. like :- signup.java , login.java 
 
-- **XML**: XML is used for designing the user interface layouts of the application. Android's layout files are written in XML, defining the structure and appearance of the app's screens.
+- **XML**: XML is used for designing the user interface layouts of the application. Android's layout files are written in XML, defining the structure and appearance of the app's screens. like :- signup.xml . login.xml
 
-- **SQL**: SQL (Structured Query Language) is used for managing and querying the database in the application. It is used to store and retrieve data related to events, user accounts, bookings, etc.
+- **SQL**: SQL (Structured Query Language) is used for managing and querying the database in the application. It is used to store and retrieve data related to events, user accounts, bookings, etc.    like :- database.sql 
 
 
 
